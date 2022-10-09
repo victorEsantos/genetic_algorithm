@@ -1,11 +1,10 @@
 import numpy as np
+
 import ga
 from Mochila import Mochila
 
 
 def main():
-
-    pop_size = 6
 
     saco_de_dormir = Mochila('Saco de dormir', 15, 15)
     corda = Mochila('Corda', 3, 10)
@@ -17,7 +16,6 @@ def main():
     itens = [saco_de_dormir, corda, canivete, tocha, garrafa, comida]
 
     num_weights = 6
-
     sol_per_pop = 8
 
     # população tem sol_per_pop cromossomos com num_weights gens

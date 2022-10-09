@@ -1,8 +1,8 @@
 import sys
-from math import inf
+from typing import List
 
 import numpy as np
-from typing import List
+
 from Mochila import Mochila
 
 
@@ -26,8 +26,10 @@ def cal_pop_fitness(itens: List[Mochila], pop):
 
     return resultados
 
+
 def get_pontos(itens: List[Mochila]):
     return [item.ponto for item in itens]
+
 
 def get_pesos(itens: List[Mochila]):
     return [item.peso for item in itens]
@@ -57,7 +59,7 @@ def crossover(parents, offspring_size):
         # índice do primeiro genitor
         parent1_idx = k % parents.shape[0]
         # índice do segundo genitor
-        parent2_idx = (k+1) % parents.shape[0]
+        parent2_idx = (k + 1) % parents.shape[0]
         # o novo filho terá a primeira parte de seus genes
         # oriunda do primeiro genitor
         offspring[k, 0:crossover_point] = parents[parent1_idx, 0:crossover_point]
